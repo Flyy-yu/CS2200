@@ -1,0 +1,68 @@
+CS 2200 Summer 2015
+Project 6
+Name: peiyu wang
+GT Number: 903006854
+
+Problem 1B
+----------
+
+1cpu
+# of Context Switches: 97
+Total execution time: 67.6 s
+Total time spent in READY state: 389.9 s
+
+2cpu
+# of Context Switches: 108
+Total execution time: 36.0 s
+Total time spent in READY state: 83.9 s
+
+4cpu
+# of Context Switches: 185
+Total execution time: 33.3 s
+Total time spent in READY state: 1.1 s
+
+This is not a prefect linear relation.
+Increase number of CPU can decrease the execution time, because if there are more cpu, we can execute more process at the same time, but increase from 1 cpu to 2 cpu, the time decrease is big, but increase from 2 cpu to 4 cpu, the change is small. With lots of CPU, some CPU just in idle, not doing anything, So thats why from 2 to 4 cpu, the performance improvement is small.
+
+/* Fix me */
+
+Problem 2B
+----------
+200ms
+# of Context Switches: 362
+Total execution time: 67.5 s
+Total time spent in READY state: 285.4 s
+
+400ms
+# of Context Switches: 203
+Total execution time: 67.6 s
+Total time spent in READY state: 298.8 s
+
+
+600ms
+# of Context Switches: 161
+Total execution time: 67.6 s
+Total time spent in READY state: 314.5 s
+
+
+800ms
+# of Context Switches: 136
+Total execution time: 67.6 s
+Total time spent in READY state: 325.4 s
+
+if the timeslices is so small, there will have more content switch, this will increase the execution time. Also, process have individual page table, if we contend switch so frequenly, it will increase the change to have page fault. For the reason above, in a real OS, we don’t want to set the timeslices so small.
+/* Fix me */
+
+Problem 3B
+----------
+1 cpu
+# of Context Switches: 168
+Total execution time: 68.8 s
+Total time spent in READY state: 137.1 s
+
+The Static Priority Scheduler have the lowest wait time so this is the closest one to SJF
+The rank for Static Priority Scheduler is base on the execution time, so we can say the Static Priority Scheduler is kind of a SJF. In this assignment, we can say Static Priority Scheduler is close to SJF, but if other rank for Static Priority Scheduler is not base on execution time, this conclusion may be incorrect.
+
+
+/* Fix me */
+
